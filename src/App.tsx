@@ -38,6 +38,7 @@ import {
   InteractiveConfigurator,
 } from './components/InteractiveConfigurator';
 import { CartDrawerModal } from './components/CartDrawerModal';
+import { RevealOnScroll } from './components/RevealOnScroll';
 
 export default function App() {
   // Mobile Navigation State
@@ -287,7 +288,7 @@ export default function App() {
           3. HERO SECTION (Regra dos 5 Segundos · Layout em 2 Colunas + KPI Bar)
           ===================================================================== */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-[#F3EFE6]/70 via-[#FBF8F3] to-[#FBF8F3] border-b border-[#141413]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* 2-Column Hero Split */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
             {/* Left Column: Value Proposition, Objections Removed & Dual CTA */}
@@ -494,14 +495,14 @@ export default function App() {
               </p>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
           4. SEÇÃO DE CONTRASTE COGNITIVO (Mercado Tradicional vs. Jeanne Garcia)
           ===================================================================== */}
       <section className="py-20 bg-[#F3EFE6] border-b border-[#C5A059]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12 space-y-3">
             <div className="text-xs font-semibold text-[#7A1C1C] tracking-wide">
               Comparativo de Segurança & Previsibilidade
@@ -612,14 +613,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
           5. PROPOSTA DE VALOR EM BENTO GRID + EXPLORADOR DE CAMADAS & COLEÇÃO
           ===================================================================== */}
       <section id="diferenciais" className="py-20 sm:py-24 bg-[#FBF8F3] border-b border-[#141413]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           {/* Bento Grid Header */}
           <div className="max-w-3xl space-y-3">
             <div className="flex items-center gap-2 text-xs text-[#7A1C1C] font-semibold tracking-wide">
@@ -849,30 +850,32 @@ export default function App() {
               ))}
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
           6. COMPONENTE INTERATIVO DE ALTO ENGAJAMENTO (Configurador em 3 Abas)
           ===================================================================== */}
-      <InteractiveConfigurator
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-        occasion={occasion}
-        onOccasionChange={setOccasion}
-        guests={guests}
-        onGuestsChange={setGuests}
-        cakeStyle={cakeStyle}
-        onCakeStyleChange={setCakeStyle}
-        selectedFlavor={selectedFlavor}
-        onFlavorChange={setSelectedFlavor}
-        selectedNeighborhoodId={selectedNeighborhoodId}
-        onNeighborhoodChange={setSelectedNeighborhoodId}
-        cart={cart}
-        onAddToCart={handleAddToCart}
-        onUpdateCartQty={handleUpdateCartQty}
-        onOpenCartDrawer={() => setIsCartDrawerOpen(true)}
-      />
+      <RevealOnScroll>
+        <InteractiveConfigurator
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+          occasion={occasion}
+          onOccasionChange={setOccasion}
+          guests={guests}
+          onGuestsChange={setGuests}
+          cakeStyle={cakeStyle}
+          onCakeStyleChange={setCakeStyle}
+          selectedFlavor={selectedFlavor}
+          onFlavorChange={setSelectedFlavor}
+          selectedNeighborhoodId={selectedNeighborhoodId}
+          onNeighborhoodChange={setSelectedNeighborhoodId}
+          cart={cart}
+          onAddToCart={handleAddToCart}
+          onUpdateCartQty={handleUpdateCartQty}
+          onOpenCartDrawer={() => setIsCartDrawerOpen(true)}
+        />
+      </RevealOnScroll>
 
       {/* =====================================================================
           7. COMO FUNCIONA (Jornada Simples e Sem Burocracia em 3 Etapas)
@@ -881,7 +884,7 @@ export default function App() {
         id="como-funciona"
         className="py-20 sm:py-24 bg-[#F3EFE6] border-b border-[#C5A059]/30"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <div className="text-xs font-semibold text-[#7A1C1C] tracking-wide">
               Jornada Clara & Sem Burocracia
@@ -946,7 +949,7 @@ export default function App() {
               </div>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
@@ -956,7 +959,7 @@ export default function App() {
         id="resultados"
         className="py-20 sm:py-24 bg-[#FBF8F3] border-b border-[#141413]/10"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-14 space-y-3">
             <div className="flex items-center justify-center gap-2 text-xs font-semibold text-[#7A1C1C]">
               <span>Nota 4.8 ★ no Google Maps</span>
@@ -1004,14 +1007,14 @@ export default function App() {
               </div>
             ))}
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
           9. ESCOPO DE OFERTA / MODALIDADES DE ATENDIMENTO (Ancoragem 3 Níveis)
           ===================================================================== */}
       <section className="py-20 sm:py-24 bg-[#F3EFE6] border-b border-[#C5A059]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-14 space-y-3">
             <div className="text-xs font-semibold text-[#7A1C1C] tracking-wide">
               Escopo Transparente de Atendimento
@@ -1176,14 +1179,14 @@ export default function App() {
               </button>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
           10. BLOCO DE GARANTIA E REVERSÃO DE RISCO (Blindagem de Decisão)
           ===================================================================== */}
       <section className="py-16 bg-[#FBF8F3] border-b border-[#141413]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RevealOnScroll className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#F3EFE6] rounded-3xl p-8 sm:p-10 border border-[#C5A059]/50 flex flex-col md:flex-row items-center gap-8">
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#141413] text-[#C5A059] border border-[#C5A059] flex items-center justify-center shrink-0">
               <ShieldCheck className="w-9 h-9" />
@@ -1201,14 +1204,14 @@ export default function App() {
               </p>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
           11. PERGUNTAS FREQUENTES (FAQ Estratégico Interativo)
           ===================================================================== */}
       <section id="duvidas" className="py-20 sm:py-24 bg-[#FBF8F3] border-b border-[#141413]/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RevealOnScroll className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-2">
             <div className="text-xs font-semibold text-[#7A1C1C]">
               Respostas Diretas às Principais Objeções
@@ -1250,7 +1253,7 @@ export default function App() {
               );
             })}
           </div>
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* =====================================================================
@@ -1258,7 +1261,7 @@ export default function App() {
           ===================================================================== */}
       <footer className="bg-[#141413] text-[#FBF8F3]">
         {/* Top Conversion Banner & Physical Storefront Map */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-white/10">
+        <RevealOnScroll className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-white/10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 space-y-5">
               <div className="text-xs font-semibold text-[#C5A059]">
@@ -1340,7 +1343,7 @@ export default function App() {
               />
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
 
         {/* Quiet Institutional Bottom Bar */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#FBF8F3]/60">
