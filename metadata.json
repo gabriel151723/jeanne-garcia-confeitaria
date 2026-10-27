@@ -1,0 +1,6 @@
+{
+  "name": "Jeanne Garcia Confeitaria & Cafeteria",
+  "description": "Alta Confeitaria Francesa (Pâtisserie), Cafeteria de Especialidade, Brunch de Fim de Semana e Bolos Decorados para Casamentos e Eventos na Pituba, Salvador.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
